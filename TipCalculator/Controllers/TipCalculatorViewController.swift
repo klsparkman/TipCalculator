@@ -14,25 +14,24 @@ class TipCalculatorViewController: UIViewController {
     @IBOutlet weak var amountBeforeTaxTextField: UITextField!
     @IBOutlet weak var tipPercentageSlider: UISlider!
     @IBOutlet weak var numberOfPeopleSlider: UISlider!
-    @IBOutlet weak var tipTotalPerPersonLabel: UILabel!
-    @IBOutlet weak var totalPricePerPersonLabel: UILabel!
+    @IBOutlet weak var tipPerPersonLabel: UILabel!
+    @IBOutlet weak var totalPerPersonLabel: UILabel!
     @IBOutlet weak var billBeforeTaxLabel: UILabel!
     @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var splitPeopleLabel: UILabel!
     
     // Mark: - Properties
-    var tipCalculator = TipCalculator(amountBeforeTax: 0, tipPercentage: 0.1)
+    var tipCalculator = TipCalculator(amountBeforeTax: 0, tipPercentage: 0.10)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         amountBeforeTaxTextField.becomeFirstResponder()
-        amountBeforeTaxTextField.keyboardType = UIKeyboardType.numberPad
-    
+        amountBeforeTaxTextField.keyboardType = UIKeyboardType.decimalPad
     }
     
-    func calculateTip() {
-        tipCalculator.tipPercentage = Double(tipPercentageSlider.value) / 100
+    func calculateBill() {
+        tipCalculator.tipPercentage = Double(tipPercentageSlider.value) / 100.0
         tipCalculator.amountBeforeTax = (amountBeforeTaxTextField.text! as NSString).doubleValue
         tipCalculator.calculateTip()
         updateUI()
@@ -40,21 +39,27 @@ class TipCalculatorViewController: UIViewController {
     }
     
     func updateUI() {
-        totalPricePerPersonLabel.text = String(format: "$%0.2f", tipCalculator.totalAmount)
+        totalPerPersonLabel.text = String(format: "%.2f", tipCalculator.totalAmount)
         let numberOfPeople: Int = Int(numberOfPeopleSlider.value)
-        tipTotalPerPersonLabel.text = String(format: "$%0.2f", tipCalculator.totalAmount / Double(numberOfPeople))
+        tipPerPersonLabel.text = String(format: "%.2f", tipCalculator.tipAmount / Double(numberOfPeople))
+        billBeforeTaxLabel.addCornerRadius()
+        tipPercentageLabel.addCornerRadius()
+        splitPeopleLabel.addCornerRadius()
+        tipPerPersonLabel.addCornerRadius()
+        totalPerPersonLabel.addCornerRadius()
     }
     
     // Mark: - Actions
     @IBAction func tipSliderValueChanged(_ sender: Any) {
-        tipPercentageLabel.text = String(format: "Tip: %0.1d%%", Int(tipPercentageSlider.value))
-        calculateTip()
+        tipPercentageLabel.text = "Tip: \(Int(tipPercentageSlider.value))"
+            //String(format: "Tip: %02d%%", Int(tipPercentageSlider.value))
+        calculateBill()
     }
     @IBAction func numberOfPeopleSliderChanged(_ sender: Any) {
         splitPeopleLabel.text = "Split: \(Int(numberOfPeopleSlider.value))"
-        calculateTip()
+        calculateBill()
     }
     @IBAction func amountBeforeTextFieldChanged(_ sender: Any) {
-        calculateTip()
+        calculateBill()
     }
 }//End of class

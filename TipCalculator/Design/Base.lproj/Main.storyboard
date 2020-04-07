@@ -16,152 +16,151 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9g-JU-cyD">
-                                <rect key="frame" x="40" y="124" width="334" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="8wB-9c-PdK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="37"/>
-                                <color key="textColor" name="brownColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-MP-mYC">
-                                <rect key="frame" x="4" y="284" width="406" height="50"/>
-                                <color key="backgroundColor" name="lightTeal"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="kyj-gc-GZa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" name="brownColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What is the bill total?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2O-sS-sgF">
-                                <rect key="frame" x="100" y="292" width="304" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="amountBeforeTextFieldChanged:" destination="Dhq-yF-Pcn" eventType="editingDidEnd" id="7z2-YE-kyM"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Tip %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8D-cD-wAX">
-                                <rect key="frame" x="4" y="344" width="406" height="50"/>
-                                <color key="backgroundColor" name="lightTeal"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Wyn-WO-8uZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" name="brownColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="AoP-dv-h6t">
-                                <rect key="frame" x="98" y="354" width="308" height="30"/>
-                                <color key="thumbTintColor" name="brownColor"/>
-                                <connections>
-                                    <action selector="tipSliderValueChanged:" destination="Dhq-yF-Pcn" eventType="valueChanged" id="yNt-Bj-jij"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Split" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlR-YF-9fd">
-                                <rect key="frame" x="4" y="404" width="406" height="50"/>
-                                <color key="backgroundColor" name="lightTeal"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="tGA-eq-ezO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" name="brownColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-qW-NSG">
-                                <rect key="frame" x="98" y="414" width="308" height="31"/>
-                                <color key="thumbTintColor" name="brownColor"/>
-                                <connections>
-                                    <action selector="numberOfPeopleSliderChanged:" destination="Dhq-yF-Pcn" eventType="valueChanged" id="IL9-Vu-oym"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Tip (per person):" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDY-uk-aDt">
-                                <rect key="frame" x="4" y="504" width="406" height="50"/>
-                                <color key="backgroundColor" name="pinkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Xvn-fD-KKo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" name="brownColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Total (per person):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hf2-QO-TWa">
-                                <rect key="frame" x="4" y="584" width="406" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="vbE-v0-8z6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" name="brownColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBA-d2-vWf">
-                                <rect key="frame" x="300" y="505" width="110" height="49"/>
-                                <color key="backgroundColor" name="greenColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6a-1D-T5o">
+                                <rect key="frame" x="66.5" y="130" width="281" height="40"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYz-Aa-GXP">
-                                <rect key="frame" x="300" y="584" width="110" height="49"/>
-                                <color key="backgroundColor" name="greenColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zcl-Wh-2NS">
+                                <rect key="frame" x="10" y="290" width="394" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFQ-Ch-hOH">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
+                                        <color key="backgroundColor" name="lightTeal"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
+                                        <color key="textColor" name="brownColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="HBr-we-YbU">
+                                        <rect key="frame" x="195" y="0.0" width="201" height="51"/>
+                                        <color key="thumbTintColor" name="brownColor"/>
+                                        <connections>
+                                            <action selector="tipSliderValueChanged:" destination="Dhq-yF-Pcn" eventType="valueChanged" id="vbA-BG-JUI"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hP4-pZ-wOZ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3nG-Ig-N5D" userLabel="TipStackView">
+                                <rect key="frame" x="10" y="440" width="394" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip (per person)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9s-va-yVU">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="60"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
+                                        <color key="textColor" name="brownColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwi-xB-ozs">
+                                        <rect key="frame" x="202" y="0.0" width="192" height="60"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
+                                        <color key="textColor" name="brownColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="crA-QZ-DtK"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bqP-K9-pLD">
+                                <rect key="frame" x="10" y="520" width="394" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total (per person)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSd-t9-9kt">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="60"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
+                                        <color key="textColor" name="brownColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQ5-KM-Ppo">
+                                        <rect key="frame" x="202" y="0.0" width="192" height="60"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
+                                        <color key="textColor" name="brownColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dDg-RW-cLX"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lad-fJ-lww">
+                                <rect key="frame" x="10" y="220" width="394" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGI-dW-gip">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
+                                        <color key="backgroundColor" name="lightTeal"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
+                                        <color key="textColor" name="brownColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What was your bill?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Awc-fp-uDZ">
+                                        <rect key="frame" x="197" y="0.0" width="197" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="amountBeforeTextFieldChanged:" destination="Dhq-yF-Pcn" eventType="editingDidEnd" id="I2p-Gx-8ew"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jAV-Ig-ZB9"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="32o-dK-INW">
+                                <rect key="frame" x="10" y="360" width="394" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOZ-6q-vVt">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="50"/>
+                                        <color key="backgroundColor" name="lightTeal"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
+                                        <color key="textColor" name="brownColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="L7y-wa-8f8">
+                                        <rect key="frame" x="195" y="0.0" width="201" height="51"/>
+                                        <color key="thumbTintColor" name="brownColor"/>
+                                        <connections>
+                                            <action selector="numberOfPeopleSliderChanged:" destination="Dhq-yF-Pcn" eventType="valueChanged" id="ZRK-U8-a8k"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jaX-kF-zxb"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="pinkColor"/>
                         <constraints>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="n9g-JU-cyD" secondAttribute="trailing" constant="40" id="1ux-6n-ljt"/>
-                            <constraint firstItem="jlR-YF-9fd" firstAttribute="top" secondItem="Z8D-cD-wAX" secondAttribute="bottom" constant="10" id="2MG-eU-NvP"/>
-                            <constraint firstItem="Bmh-MP-mYC" firstAttribute="top" secondItem="n9g-JU-cyD" secondAttribute="bottom" constant="60" id="396-Q4-Ce7"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="bottom" secondItem="o2O-sS-sgF" secondAttribute="bottom" constant="535" id="4vQ-SM-rIK"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="bottom" secondItem="AoP-dv-h6t" secondAttribute="bottom" constant="479" id="5Us-OS-JFZ"/>
-                            <constraint firstItem="SBA-d2-vWf" firstAttribute="baseline" secondItem="uDY-uk-aDt" secondAttribute="baseline" id="6LD-Fw-obz"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="AoP-dv-h6t" secondAttribute="trailing" constant="10" id="9tM-Ff-p2l"/>
-                            <constraint firstItem="Z8D-cD-wAX" firstAttribute="top" secondItem="Bmh-MP-mYC" secondAttribute="bottom" constant="10" id="CTn-bN-fnD"/>
-                            <constraint firstItem="AoP-dv-h6t" firstAttribute="top" secondItem="Bmh-MP-mYC" secondAttribute="bottom" constant="20" id="GDf-h1-inf"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="Hf2-QO-TWa" secondAttribute="trailing" constant="4" id="GLV-8V-yMh"/>
-                            <constraint firstItem="Z8D-cD-wAX" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="4" id="HNm-Av-HA2"/>
-                            <constraint firstItem="jlR-YF-9fd" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="4" id="HsL-RV-Jok"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="bottom" secondItem="cYz-Aa-GXP" secondAttribute="bottom" constant="229" id="Kb4-hx-Xn1"/>
-                            <constraint firstItem="Bmh-MP-mYC" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="4" id="Oiy-P0-y5U"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="Z8D-cD-wAX" secondAttribute="trailing" constant="4" id="QKG-iR-bpG"/>
-                            <constraint firstItem="g0n-qW-NSG" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="100" id="QbZ-ap-2VY"/>
-                            <constraint firstItem="o2O-sS-sgF" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="100" id="RZy-qn-EkC"/>
-                            <constraint firstItem="o2O-sS-sgF" firstAttribute="top" secondItem="n9g-JU-cyD" secondAttribute="bottom" constant="68" id="Ruu-Tv-ojD"/>
-                            <constraint firstItem="cYz-Aa-GXP" firstAttribute="top" secondItem="uDY-uk-aDt" secondAttribute="bottom" constant="30" id="S56-1r-StQ"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="jlR-YF-9fd" secondAttribute="trailing" constant="4" id="T2a-KK-jBk"/>
-                            <constraint firstItem="n9g-JU-cyD" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="40" id="WVa-pf-uPh"/>
-                            <constraint firstItem="Hf2-QO-TWa" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="4" id="X4V-62-t8I"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="bottom" secondItem="g0n-qW-NSG" secondAttribute="bottom" constant="418" id="ay9-Nl-EP3"/>
-                            <constraint firstItem="SBA-d2-vWf" firstAttribute="centerY" secondItem="uDY-uk-aDt" secondAttribute="centerY" id="cRZ-hk-nvj"/>
-                            <constraint firstItem="n9g-JU-cyD" firstAttribute="top" secondItem="24y-EO-oOo" secondAttribute="top" constant="80" id="cbU-l3-QWa"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="o2O-sS-sgF" secondAttribute="trailing" constant="10" id="ePn-WF-4ge"/>
-                            <constraint firstItem="uDY-uk-aDt" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="4" id="hMT-Yr-ngE"/>
-                            <constraint firstItem="AoP-dv-h6t" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="100" id="kBf-lp-d5x"/>
-                            <constraint firstItem="cYz-Aa-GXP" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="300" id="kus-Of-2E0"/>
-                            <constraint firstItem="Bmh-MP-mYC" firstAttribute="centerX" secondItem="wUg-N3-u0n" secondAttribute="centerX" id="mHY-LV-P6m"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="cYz-Aa-GXP" secondAttribute="trailing" constant="4" id="n2p-U1-Is4"/>
-                            <constraint firstItem="Hf2-QO-TWa" firstAttribute="top" secondItem="uDY-uk-aDt" secondAttribute="bottom" constant="30" id="pfx-6F-ZRN"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="uDY-uk-aDt" secondAttribute="trailing" constant="4" id="qgm-Cz-m7z"/>
-                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="g0n-qW-NSG" secondAttribute="trailing" constant="10" id="rEF-Oe-usF"/>
-                            <constraint firstItem="SBA-d2-vWf" firstAttribute="leading" secondItem="cYz-Aa-GXP" secondAttribute="leading" id="tGp-gw-F3a"/>
-                            <constraint firstItem="uDY-uk-aDt" firstAttribute="top" secondItem="jlR-YF-9fd" secondAttribute="bottom" constant="50" id="uHk-ta-ews"/>
-                            <constraint firstItem="SBA-d2-vWf" firstAttribute="trailing" secondItem="uDY-uk-aDt" secondAttribute="trailing" id="zjn-0l-ia5"/>
+                            <constraint firstItem="zcl-Wh-2NS" firstAttribute="top" secondItem="lad-fJ-lww" secondAttribute="bottom" constant="20" id="0ke-u9-ga2"/>
+                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="zcl-Wh-2NS" secondAttribute="trailing" constant="10" id="6vp-Rl-dKK"/>
+                            <constraint firstItem="3nG-Ig-N5D" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="10" id="75Y-Su-Met"/>
+                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="3nG-Ig-N5D" secondAttribute="trailing" constant="10" id="AIW-Av-HpC"/>
+                            <constraint firstItem="lad-fJ-lww" firstAttribute="top" secondItem="p6a-1D-T5o" secondAttribute="bottom" constant="50" id="Ez1-Kq-DGv"/>
+                            <constraint firstItem="32o-dK-INW" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="10" id="LUH-WT-DkO"/>
+                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="bqP-K9-pLD" secondAttribute="trailing" constant="10" id="OMB-PL-BMn"/>
+                            <constraint firstItem="3nG-Ig-N5D" firstAttribute="top" secondItem="32o-dK-INW" secondAttribute="bottom" constant="30" id="OqQ-pl-rcd"/>
+                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="32o-dK-INW" secondAttribute="trailing" constant="10" id="Pic-nj-7tY"/>
+                            <constraint firstItem="lad-fJ-lww" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="10" id="QUV-dG-bU4"/>
+                            <constraint firstItem="p6a-1D-T5o" firstAttribute="centerX" secondItem="24y-EO-oOo" secondAttribute="centerX" id="SOR-IB-7ce"/>
+                            <constraint firstItem="24y-EO-oOo" firstAttribute="trailing" secondItem="lad-fJ-lww" secondAttribute="trailing" constant="10" id="VbQ-P8-KuK"/>
+                            <constraint firstItem="p6a-1D-T5o" firstAttribute="top" secondItem="24y-EO-oOo" secondAttribute="top" constant="86" id="Zcd-p7-Lbb"/>
+                            <constraint firstItem="bqP-K9-pLD" firstAttribute="top" secondItem="3nG-Ig-N5D" secondAttribute="bottom" constant="20" id="au5-3e-ZCC"/>
+                            <constraint firstItem="bqP-K9-pLD" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="10" id="fgL-tc-axh"/>
+                            <constraint firstItem="zcl-Wh-2NS" firstAttribute="leading" secondItem="24y-EO-oOo" secondAttribute="leading" constant="10" id="jZe-nQ-qx3"/>
+                            <constraint firstItem="32o-dK-INW" firstAttribute="top" secondItem="zcl-Wh-2NS" secondAttribute="bottom" constant="20" id="lL2-Ch-b5x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="24y-EO-oOo"/>
                     </view>
                     <connections>
-                        <outlet property="amountBeforeTaxTextField" destination="o2O-sS-sgF" id="h5i-7A-mtv"/>
-                        <outlet property="billBeforeTaxLabel" destination="Bmh-MP-mYC" id="33E-cf-Hby"/>
-                        <outlet property="numberOfPeopleSlider" destination="g0n-qW-NSG" id="ucY-NC-XEX"/>
-                        <outlet property="splitPeopleLabel" destination="jlR-YF-9fd" id="2dg-8i-C8t"/>
-                        <outlet property="tipPercentageLabel" destination="Z8D-cD-wAX" id="A7O-SW-aZn"/>
-                        <outlet property="tipPercentageSlider" destination="AoP-dv-h6t" id="mM1-kA-5Eh"/>
-                        <outlet property="tipTotalPerPersonLabel" destination="SBA-d2-vWf" id="GUw-Au-I96"/>
-                        <outlet property="totalPricePerPersonLabel" destination="cYz-Aa-GXP" id="2u2-gj-SJD"/>
+                        <outlet property="amountBeforeTaxTextField" destination="Awc-fp-uDZ" id="QFu-Jq-Goc"/>
+                        <outlet property="billBeforeTaxLabel" destination="OGI-dW-gip" id="8W4-5t-eTM"/>
+                        <outlet property="numberOfPeopleSlider" destination="L7y-wa-8f8" id="X9i-TE-Ktr"/>
+                        <outlet property="splitPeopleLabel" destination="UOZ-6q-vVt" id="Uuw-0x-eZj"/>
+                        <outlet property="tipPerPersonLabel" destination="bwi-xB-ozs" id="hwm-Iv-DSn"/>
+                        <outlet property="tipPercentageLabel" destination="oFQ-Ch-hOH" id="8Ly-TX-hyD"/>
+                        <outlet property="tipPercentageSlider" destination="HBr-we-YbU" id="CXR-6V-Pfz"/>
+                        <outlet property="totalPerPersonLabel" destination="IQ5-KM-Ppo" id="BBj-xi-ejj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3eW-ZJ-fgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -172,9 +171,6 @@
     <resources>
         <namedColor name="brownColor">
             <color red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="greenColor">
-            <color red="0.71764705882352942" green="0.93725490196078431" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="lightTeal">
             <color red="0.68235294117647061" green="0.93725490196078431" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
